@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Inspection Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="descartes-dashboard">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="https://www.descartes.com/themes/custom/descartes/logo.svg" alt="Logo" class="logo" onerror="this.style.display='none'">
+                <h1>Inspection Completion Dashboard</h1>
+            </div>
+            <div class="controls">
+                <input type="date" id="dateStart">
+                <input type="date" id="dateEnd">
+                <button id="refreshBtn">Update Report</button>
+                <button id="exportBtn" class="secondary-btn">Download Excel</button>
+            </div>
+        </header>
+
+        <!-- KPI Summary Section -->
+        <section class="kpi-container">
+            <div class="kpi-card red-border">
+                <span class="kpi-label">Non Compliance</span>
+                <span id="kpi-missing" class="kpi-value">0</span>
+                <span class="kpi-subtext">Drove with 0 inspections</span>
+            </div>
+            <div class="kpi-card yellow-border">
+                <span class="kpi-label">Partial Compliance</span>
+                <span id="kpi-partial" class="kpi-value">0</span>
+                <span class="kpi-subtext">Missed secondary vehicles</span>
+            </div>
+            <div class="kpi-card green-border">
+                <span class="kpi-label">Fully Compliant</span>
+                <span id="kpi-compliant" class="kpi-value">0</span>
+                <span class="kpi-subtext">All vehicles inspected</span>
+            </div>
+            <div class="kpi-card blue-border">
+                <span class="kpi-label">Fleet Score</span>
+                <span id="kpi-score" class="kpi-value">0%</span>
+                <span class="kpi-subtext">Overall compliance rate</span>
+            </div>
+        </section>
+
+        <!-- Main Data Table -->
+        <div class="table-wrapper">
+            <table id="reportTable">
+                <thead>
+                    <tr id="headerRow">
+                        <th>Driver Details</th>
+                        <!-- Dates will be injected here by main.js -->
+                    </tr>
+                </thead>
+                <tbody id="reportContent">
+                    <!-- Data will be injected here by main.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
