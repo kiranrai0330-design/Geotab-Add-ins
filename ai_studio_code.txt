@@ -1,0 +1,14 @@
+{
+  "name": "Descartes Inspection Dashboard",
+  "supportEmail": "support@yourdomain.com",
+  "version": "1.0.0",
+  "items": [
+    {
+      "url": "index.html",
+      "path": "EngineMaintenanceLink/",
+      "menuName": {
+        "en": "Inspection Dashboard"
+      }
+    }
+  ]
+}
